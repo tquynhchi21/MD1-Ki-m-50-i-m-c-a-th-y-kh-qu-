@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<P> nhập cạnh của ba tam giác</P>
+cạnh a: <input type="number" id=" a" value=0> <br><br>
+cạnh b: <input type="number" id=" b" value="0"><br><br>
+cạnh c: <input type="number" id="c " value="0"> <br><br>
+<button onclick="check ()"> kiểm tra </button>
+<P id="result"></P>
+<script>
+    function check() {
+        let a = +document.getElementById('a').valueOf;
+        let b = +document.getElementById('b').valueOf;
+        let c = +document.getElementById('c').valueOf;
+
+
+        if (a < 0 || b < 0 || C < 0)
+        {
+
+            document.getElementById('result').innerText = 'cạnh của tam giác > 0';
+        }
+
+         else if ((a * a == b * b == c * c) || (b * b == c * c + a * a) || (c * c == a * a + b * b))
+         {
+            document.getElementById('result').innerText = "tam giác vuông";
+        }
+         else
+        {
+            document.getElementById('result').innerText= " tam giác thường";
+        }
+
+
+    }
+         </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+
+<img src="kien beooo" id="kiên" style="width: 318px; position: absolute; top: 0; left: 0">
+<img src="serpukhov" id="chi" style="width: 318px; position: absolute; top: 0; left: 600px">
+
+<script>
+
+  let kienbeoooImg = document.getElementById('kiên');
+  let serpukhovImg = document.getElementById('chi')
+  document.addEventListener('keydown',move);
+
+  function move(evt) {
+    switch (evt.keyCode){
+      case 39:
+        if(parseInt(kienbeoooImg.style.left) + parseInt(kienbeoooImg.style.width) < parseInt(serpukhovImg.style.left)){
+          moveRight();
+        } else {
+          alert('Привет');
+          alert('Я стою здесь с полудня');
+          document.getElementById('chi ').src = 'chi2.png';
+        }
+        break;
+      case 37:
+        moveLeft();
+
+        break;
+    }
+  }
+
+  function moveLeft() {
+    kienbeoooImg.style.left = parseInt(kienbeoooImg.style.left) - 15 + 'px';
+  }
+
+  function moveRight() {
+    kienbeoooImg.style.left = parseInt(kienbeoooImg.style.left) + 15 + 'px';
+  }
+
+</script>
+
+</body>
+</html>
